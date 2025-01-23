@@ -1,0 +1,153 @@
+.penskills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: fit-content;
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.penskillsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.penskillsHeader h2 {
+  font-family: var(--primaryFont);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.penskillsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3.5rem;
+  padding: 0 2rem;
+}
+
+.penskill--scroll {
+  width: 100%;
+  margin: 0 2rem;
+}
+
+.penskill--box {
+  background: #fafafa;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  width: 160px;
+  height: 160px;
+  margin: 1.5rem 5rem; /* Adjusted margin here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  transition: 300ms ease-in-out;
+}
+
+
+
+.penskill--box:hover {
+  transform: scale(1.15);
+}
+
+.penskill--box > img {
+  height: 50px;
+  pointer-events: none;
+}
+
+.penskill--box h3 {
+  font-family: "Big Shoulders Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.marquee {
+  padding: 3rem 0;
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+  .penskills {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  .penskillsContainer {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .penskills {
+    padding: 1rem;
+    min-height: 100%;
+  }
+  .penskillsContainer {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  .penskillsHeader h2 {
+    font-size: 3.2rem;
+  }
+  .penskill--box {
+    width: 150px;
+    height: 150px;
+    margin: 1.2rem;
+    padding: 2rem 1rem;
+  }
+
+  .penskill--box > img {
+    height: 45px;
+  }
+
+  .penskill--box h3 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .penskills {
+    padding: 0.5rem;
+  }
+  .penskillsContainer {
+    padding: 0.5rem;
+  }
+  .penskillsHeader h2 {
+    font-size: 3rem;
+  }
+
+  .penskill--scroll {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .penskill--box {
+    width: 135px;
+    height: 135px;
+    margin: 1.2rem;
+    padding: 2rem 1rem;
+  }
+
+  .penskill--box > img {
+    height: 40px;
+  }
+
+  .penskillsHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .penskill--box h3 {
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+}

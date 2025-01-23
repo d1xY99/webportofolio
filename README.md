@@ -2,6 +2,7 @@
 
 This is a personal website project built using **React.js** and containerized with **Docker**. The website showcases portfolio information, skills, projects, and more.
 
+https://amir-basic.netlify.app/
 ---
 
 

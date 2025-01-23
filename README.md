@@ -34,7 +34,7 @@ Make sure you have the following installed on your system:
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone git@github.com:d1xY99/webportofolio.git
    
    npm run dev
    # or

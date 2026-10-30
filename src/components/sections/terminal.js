@@ -2,7 +2,7 @@ import { useInView } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
 const script = [
-    { cmd: 'whoami', out: ['amir_basic · full stack developer & pentester'] },
+    { cmd: 'whoami', out: ['amir_basic · full stack & systems developer'] },
     { cmd: 'cat stack.txt', out: ['TypeScript · Rust · C · C++ · Python · SQL'] },
     {
         cmd: 'nmap -sV ambition',

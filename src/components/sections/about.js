@@ -73,7 +73,7 @@ function About() {
                                 <span className='gradient-text'>{currentJob.company}</span>
                             </h3>
                             <p className='card__muted'>
-                                Since {currentJob.startYear}. Building web platforms end to end: backend services, dashboards and the infrastructure they run on.
+                                Since {currentJob.startYear}, building complete web applications: backend services and databases, the frontend people use, and the infrastructure it all runs on.
                             </p>
                             <FiArrowUpRight className='now__arrow' />
                         </SpotlightCard>

@@ -281,7 +281,7 @@ main {
   inset: 0;
   background: radial-gradient(
     600px circle at var(--cursor-x, 50%) var(--cursor-y, -20%),
-    rgba(var(--accent-rgb), 0.09),
+    rgba(var(--accent-rgb), 0.04),
     transparent 60%
   );
 }
@@ -1042,14 +1042,14 @@ main {
 .spotlight-card::before {
   inset: 0;
   z-index: -1;
-  background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.12), transparent 45%);
+  background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.06), transparent 45%);
 }
 
 .spotlight-card::after {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-soft-rgb), 0.85), transparent 60%);
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-soft-rgb), 0.4), transparent 60%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);

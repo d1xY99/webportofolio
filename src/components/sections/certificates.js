@@ -46,11 +46,6 @@ function Lightbox({ cert, onClose }) {
                         </p>
                     </div>
                     <div className='lightbox__actions'>
-                        {cert.link && (
-                            <a href={cert.link} target='_blank' rel='noreferrer' className='btn btn--ghost btn--small'>
-                                Open original <FiArrowUpRight />
-                            </a>
-                        )}
                         <button type='button' className='lightbox__close' onClick={onClose} aria-label='Close'>
                             <FiX />
                         </button>

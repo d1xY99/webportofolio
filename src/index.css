@@ -1501,6 +1501,20 @@ html.has-custom-cursor * {
   gap: 12px;
 }
 
+.skills__group--languages .skills__list {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skills__group--languages .skill {
+  padding: 30px 10px 24px;
+  gap: 16px;
+}
+
+.skills__group--languages .skill__icon img {
+  width: 54px;
+  height: 54px;
+}
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -2137,7 +2151,8 @@ a.contact__card:hover {
     translate: none;
   }
 
-  .skills__list {
+  .skills__list,
+  .skills__group--languages .skills__list {
     grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
   }
 

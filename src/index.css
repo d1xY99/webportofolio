@@ -1,78 +1,7 @@
 /* ---------- Tokens ---------- */
 
-/* Default palette: warm copper. Alternatives are switched with data-palette on <html>. */
+/* Default palette: ink and sand. Alternatives are switched with data-palette on <html>. */
 :root {
-  --bg: #0f0e0c;
-  --bg-rgb: 15, 14, 12;
-  --bg-elevated: #171513;
-  --surface-rgb: 24, 22, 19;
-  --ink-rgb: 236, 226, 210;
-  --text: #ece5d9;
-  --text-soft: #d8d0c3;
-  --muted: #9b9386;
-  --dim: #686157;
-  --accent: #d08a5c;
-  --accent-rgb: 208, 138, 92;
-  --accent-soft: #e2b48c;
-  --accent-soft-rgb: 226, 180, 140;
-  --sage: #9db096;
-  --second-rgb: 157, 176, 150;
-  --green: #8fb184;
-  --green-rgb: 143, 177, 132;
-  --live-text: #cfe0c6;
-  --cream: #efe7da;
-  --cream-hover: #f6efe4;
-  --on-cream: #1a1714;
-  --monogram: #f3e4d4;
-  --scrollbar: #2c2925;
-  --glow-1-rgb: 150, 92, 52;
-  --glow-3-rgb: 110, 118, 92;
-  --gradient: linear-gradient(100deg, #e6bd96 0%, #d08a5c 55%, #c0703f 100%);
-  --card: rgba(var(--ink-rgb), 0.025);
-  --card-strong: rgba(var(--ink-rgb), 0.05);
-  --line: rgba(var(--ink-rgb), 0.08);
-  --line-strong: rgba(var(--ink-rgb), 0.16);
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Instrument Serif', Georgia, serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-
-  --radius: 24px;
-  --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --container: 1200px;
-
-  color-scheme: dark;
-}
-
-html[data-palette='moss'] {
-  --bg: #0d0f0e;
-  --bg-rgb: 13, 15, 14;
-  --bg-elevated: #151816;
-  --surface-rgb: 22, 25, 23;
-  --ink-rgb: 224, 230, 220;
-  --text: #e4e8e0;
-  --text-soft: #d1d7cd;
-  --muted: #8d968c;
-  --dim: #5d655d;
-  --accent: #a9b98a;
-  --accent-rgb: 169, 185, 138;
-  --accent-soft: #cdd8b4;
-  --accent-soft-rgb: 205, 216, 180;
-  --sage: #c9b79c;
-  --second-rgb: 201, 183, 156;
-  --green: #9cc58a;
-  --green-rgb: 156, 197, 138;
-  --live-text: #d6e8cc;
-  --cream: #e6eadf;
-  --cream-hover: #f1f4ec;
-  --on-cream: #131614;
-  --monogram: #e6eedb;
-  --scrollbar: #262a27;
-  --glow-1-rgb: 86, 108, 66;
-  --glow-3-rgb: 96, 88, 70;
-  --gradient: linear-gradient(100deg, #d8e2c2 0%, #a9b98a 55%, #7f9466 100%);
-}
-
-html[data-palette='sand'] {
   --bg: #0b0e12;
   --bg-rgb: 11, 14, 18;
   --bg-elevated: #121620;
@@ -99,6 +28,78 @@ html[data-palette='sand'] {
   --glow-1-rgb: 52, 72, 104;
   --glow-3-rgb: 96, 84, 60;
   --gradient: linear-gradient(100deg, #efe3c6 0%, #d4bf94 55%, #b0966a 100%);
+  --card: rgba(var(--ink-rgb), 0.025);
+  --card-strong: rgba(var(--ink-rgb), 0.05);
+  --line: rgba(var(--ink-rgb), 0.08);
+  --line-strong: rgba(var(--ink-rgb), 0.16);
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius: 24px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: 1200px;
+
+  color-scheme: dark;
+}
+
+html[data-palette='frost'] {
+  --bg: #090b0e;
+  --bg-rgb: 9, 11, 14;
+  --bg-elevated: #10141a;
+  --surface-rgb: 17, 21, 27;
+  --ink-rgb: 226, 232, 240;
+  --text: #f0f3f7;
+  --text-soft: #d9dfe7;
+  --muted: #9aa5b3;
+  --dim: #626c79;
+  --accent: #a8c7e4;
+  --accent-rgb: 168, 199, 228;
+  --accent-soft: #d3e3f2;
+  --accent-soft-rgb: 211, 227, 242;
+  --sage: #c3c9d4;
+  --second-rgb: 195, 201, 212;
+  --green: #8fd0a6;
+  --green-rgb: 143, 208, 166;
+  --live-text: #d2eedc;
+  --cream: #eef2f6;
+  --cream-hover: #ffffff;
+  --on-cream: #0d1117;
+  --monogram: #e3eefa;
+  --scrollbar: #222933;
+  --glow-1-rgb: 46, 70, 104;
+  --glow-3-rgb: 58, 66, 84;
+  --gradient: linear-gradient(100deg, #e4eef8 0%, #a8c7e4 55%, #7298bd 100%);
+}
+
+html[data-palette='pine'] {
+  --bg: #080d0e;
+  --bg-rgb: 8, 13, 14;
+  --bg-elevated: #0f1617;
+  --surface-rgb: 15, 22, 23;
+  --ink-rgb: 222, 234, 232;
+  --text: #edf3f1;
+  --text-soft: #d5e0dd;
+  --muted: #93a3a0;
+  --dim: #5c6b69;
+  --accent: #8fc6b6;
+  --accent-rgb: 143, 198, 182;
+  --accent-soft: #c4e3d9;
+  --accent-soft-rgb: 196, 227, 217;
+  --sage: #cbc3b0;
+  --second-rgb: 203, 195, 176;
+  --green: #93d39e;
+  --green-rgb: 147, 211, 158;
+  --live-text: #d4f0da;
+  --cream: #eaf1ee;
+  --cream-hover: #f7fbf9;
+  --on-cream: #0b1212;
+  --monogram: #dff2ec;
+  --scrollbar: #1f2a2a;
+  --glow-1-rgb: 34, 82, 76;
+  --glow-3-rgb: 60, 70, 62;
+  --gradient: linear-gradient(100deg, #d6eee6 0%, #8fc6b6 55%, #5f9a8b 100%);
 }
 
 /* ---------- Base ---------- */

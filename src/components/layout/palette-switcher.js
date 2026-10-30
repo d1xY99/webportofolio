@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 
 const palettes = [
-    { id: 'copper', label: 'Copper', swatch: 'linear-gradient(135deg, #e6bd96, #c0703f)' },
-    { id: 'moss', label: 'Moss', swatch: 'linear-gradient(135deg, #d8e2c2, #7f9466)' },
     { id: 'sand', label: 'Sand', swatch: 'linear-gradient(135deg, #efe3c6, #1c2533)' },
+    { id: 'frost', label: 'Frost', swatch: 'linear-gradient(135deg, #d3e3f2, #10141a)' },
+    { id: 'pine', label: 'Pine', swatch: 'linear-gradient(135deg, #c4e3d9, #0f1617)' },
 ];
 
 const STORAGE_KEY = 'portfolio-palette';
 
+const DEFAULT_PALETTE = palettes[0].id;
+
 const readStored = () => {
     try {
-        return window.localStorage.getItem(STORAGE_KEY) || 'copper';
+        const stored = window.localStorage.getItem(STORAGE_KEY);
+        return palettes.some((item) => item.id === stored) ? stored : DEFAULT_PALETTE;
     } catch (error) {
-        return 'copper';
+        return DEFAULT_PALETTE;
     }
 };
 
@@ -21,7 +24,7 @@ function PaletteSwitcher() {
     const [palette, setPalette] = useState(readStored);
 
     useEffect(() => {
-        if (palette === 'copper') delete document.documentElement.dataset.palette;
+        if (palette === DEFAULT_PALETTE) delete document.documentElement.dataset.palette;
         else document.documentElement.dataset.palette = palette;
         try {
             window.localStorage.setItem(STORAGE_KEY, palette);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { allSkills } from '../../data/skillsData';
+import SkillIcon from './skill-icon';
 
 function Row({ items, reverse }) {
     // Rendered twice so the CSS translate loop is seamless.
@@ -9,7 +10,7 @@ function Row({ items, reverse }) {
         <div className={`marquee__row ${reverse ? 'marquee__row--reverse' : ''}`}>
             {loop.map((skill, i) => (
                 <span className='marquee__item' key={`${skill.name}-${i}`} aria-hidden={i >= items.length}>
-                    <img src={skill.icon} alt='' className={skill.mono ? 'is-mono' : ''} />
+                    <SkillIcon skill={skill} size={20} />
                     {skill.name}
                     <span className='marquee__sep'>✦</span>
                 </span>

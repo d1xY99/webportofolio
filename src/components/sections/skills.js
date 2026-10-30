@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { skillGroups } from '../../data/skillsData';
 import Reveal from '../effects/reveal';
+import SkillIcon from '../effects/skill-icon';
 import SpotlightCard from '../effects/spotlight-card';
 import SectionHeading from '../layout/section-heading';
 
@@ -10,7 +11,7 @@ function Skills() {
         <section id='skills' className='section'>
             <div className='container'>
                 <SectionHeading index='03' eyebrow='Skills' title='Languages &' accent='tools'>
-                    The stack I build with, and the toolkit I use to break things before anyone else does.
+                    What I use at work every day, plus the security tools from my pentesting side.
                 </SectionHeading>
 
                 <div className='skills'>
@@ -42,12 +43,22 @@ function Skills() {
                                             whileHover={{ y: -4 }}
                                         >
                                             <span className='skill__icon'>
-                                                <img src={skill.icon} alt='' className={skill.mono ? 'is-mono' : ''} />
+                                                <SkillIcon skill={skill} size={34} />
                                             </span>
                                             <span className='skill__name'>{skill.name}</span>
                                         </motion.li>
                                     ))}
                                 </motion.ul>
+                                {group.extra && (
+                                    <div className='skills__extra'>
+                                        <span className='card__label'>{group.extra.label}</span>
+                                        <ul>
+                                            {group.extra.items.map((item) => (
+                                                <li key={item}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
                             </SpotlightCard>
                         </Reveal>
                     ))}

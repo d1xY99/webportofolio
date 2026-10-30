@@ -1,71 +1,177 @@
+import {
+    SiAmazonwebservices,
+    SiAnsible,
+    SiArgo,
+    SiAstro,
+    SiBiome,
+    SiBun,
+    SiC,
+    SiCloudflare,
+    SiCplusplus,
+    SiDocker,
+    SiDuckdb,
+    SiGit,
+    SiGithubactions,
+    SiGrafana,
+    SiHetzner,
+    SiJavascript,
+    SiKubernetes,
+    SiLinux,
+    SiMinio,
+    SiMysql,
+    SiNatsdotio,
+    SiNginx,
+    SiNodedotjs,
+    SiOpentelemetry,
+    SiPacker,
+    SiPostgresql,
+    SiPrometheus,
+    SiPython,
+    SiReact,
+    SiReactquery,
+    SiRedis,
+    SiRust,
+    SiSqlite,
+    SiStorybook,
+    SiStripe,
+    SiSupabase,
+    SiTailscale,
+    SiTailwindcss,
+    SiTerraform,
+    SiThreedotjs,
+    SiTurborepo,
+    SiTypescript,
+    SiVite,
+    SiVitest,
+    SiWebassembly,
+    SiZod,
+} from 'react-icons/si'
+import { TbBrandReactNative, TbSql } from 'react-icons/tb'
 import aircrack from '../assets/svg/skills/aircrack.svg'
 import autopsy from '../assets/svg/skills/autopsy.svg'
 import burpsuite from '../assets/svg/skills/burpsuite.svg'
-import c from '../assets/svg/skills/c.svg'
-import cplusplus from '../assets/svg/skills/cplusplus.svg'
-import csharp from '../assets/svg/skills/csharp.svg'
-import css from '../assets/svg/skills/css.svg'
-import html from '../assets/svg/skills/html.svg'
-import java from '../assets/svg/skills/java.svg'
-import javascript from '../assets/svg/skills/javascript.svg'
 import john from '../assets/svg/skills/john.svg'
 import metasploit from '../assets/svg/skills/metasploit.svg'
-import mysql from '../assets/svg/skills/mysql.svg'
 import nikto from '../assets/svg/skills/nikto.svg'
 import nmap from '../assets/svg/skills/nmap.svg'
-import php from '../assets/svg/skills/php.svg'
-import postgresql from '../assets/svg/skills/postgresql.svg'
-import python from '../assets/svg/skills/python.svg'
 import set from '../assets/svg/skills/set.svg'
 import wireshark from '../assets/svg/skills/wireshark.svg'
 
+// A skill shows either a brand icon component (Icon + color), an image (img),
+// or, when neither exists, a monogram built from its name.
 export const skillGroups = [
     {
         id: 'languages',
         title: 'Languages',
         caption: 'What I write every day',
         skills: [
-            { name: 'JavaScript', icon: javascript },
-            { name: 'Python', icon: python },
-            { name: 'Java', icon: java },
-            { name: 'C#', icon: csharp },
-            { name: 'C++', icon: cplusplus },
-            { name: 'C', icon: c },
-            { name: 'PHP', icon: php, mono: true },
+            { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
+            { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E' },
+            { name: 'Rust', Icon: SiRust, color: '#F4A37A' },
+            { name: 'C', Icon: SiC, color: '#A8B9CC' },
+            { name: 'C++', Icon: SiCplusplus, color: '#659AD2' },
+            { name: 'Python', Icon: SiPython, color: '#4B8BBE' },
+            { name: 'SQL', Icon: TbSql, color: '#C4B5FD' },
         ],
-    },
-    {
-        id: 'web',
-        title: 'Web',
-        caption: 'Interfaces that feel right',
-        skills: [
-            { name: 'HTML', icon: html },
-            { name: 'CSS', icon: css },
-        ],
+        extra: { label: 'Also worked with', items: ['Java', 'C#', 'PHP'] },
     },
     {
         id: 'data',
         title: 'Databases',
-        caption: 'Data modelled with care',
+        caption: 'Relational, analytical and in-memory',
         skills: [
-            { name: 'MySQL', icon: mysql, mono: true },
-            { name: 'PostgreSQL', icon: postgresql },
+            { name: 'PostgreSQL', Icon: SiPostgresql, color: '#6B8FF0' },
+            { name: 'Supabase', Icon: SiSupabase, color: '#3FCF8E' },
+            { name: 'Redis', Icon: SiRedis, color: '#FF4438' },
+            { name: 'DuckDB', Icon: SiDuckdb, color: '#FFF000' },
+            { name: 'TigerBeetle' },
+            { name: 'SQLite', Icon: SiSqlite, color: '#4FC3F7' },
+            { name: 'MySQL', Icon: SiMysql, color: '#5E9BD1' },
+            { name: 'MinIO / S3', Icon: SiMinio, color: '#E0475F' },
         ],
+    },
+    {
+        id: 'frontend',
+        title: 'Frontend & mobile',
+        caption: 'Web apps, dashboards and 3D',
+        skills: [
+            { name: 'React', Icon: SiReact, color: '#61DAFB' },
+            { name: 'React Native', Icon: TbBrandReactNative, color: '#61DAFB' },
+            { name: 'Astro', Icon: SiAstro, color: '#FF7A3D' },
+            { name: 'Vite', Icon: SiVite, color: '#8D8BFF' },
+            { name: 'TanStack', Icon: SiReactquery, color: '#FF4154' },
+            { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#38BDF8' },
+            { name: 'Three.js', Icon: SiThreedotjs, color: '#FFFFFF' },
+            { name: 'Storybook', Icon: SiStorybook, color: '#FF4785' },
+        ],
+        extra: { label: 'Plus', items: ['HTML', 'CSS'] },
+    },
+    {
+        id: 'backend',
+        title: 'Backend',
+        caption: 'APIs, services and messaging',
+        skills: [
+            { name: 'Bun', Icon: SiBun, color: '#FBF0DF' },
+            { name: 'Node.js', Icon: SiNodedotjs, color: '#5FA04E' },
+            { name: 'Elysia' },
+            { name: 'Axum', Icon: SiRust, color: '#F4A37A' },
+            { name: 'NATS', Icon: SiNatsdotio, color: '#27AAE1' },
+            { name: 'WebAssembly', Icon: SiWebassembly, color: '#7B6CF6' },
+            { name: 'Zod', Icon: SiZod, color: '#6E94E0' },
+            { name: 'Stripe', Icon: SiStripe, color: '#8A84FF' },
+        ],
+    },
+    {
+        id: 'testing',
+        title: 'Testing & tooling',
+        caption: 'Keeping monorepos healthy',
+        skills: [
+            { name: 'Playwright' },
+            { name: 'Vitest', Icon: SiVitest, color: '#FCC72B' },
+            { name: 'Testcontainers' },
+            { name: 'Turborepo', Icon: SiTurborepo, color: '#FF4D6D' },
+            { name: 'Biome', Icon: SiBiome, color: '#60A5FA' },
+            { name: 'Git', Icon: SiGit, color: '#F05032' },
+        ],
+    },
+    {
+        id: 'devops',
+        title: 'DevOps & Cloud',
+        caption: 'Infrastructure as code, CI/CD and observability',
+        skills: [
+            { name: 'Docker', Icon: SiDocker, color: '#2496ED' },
+            { name: 'Kubernetes', Icon: SiKubernetes, color: '#4F87EA' },
+            { name: 'Argo CD', Icon: SiArgo, color: '#EF7B4D' },
+            { name: 'Terraform', Icon: SiTerraform, color: '#9B6CE0' },
+            { name: 'Ansible', Icon: SiAnsible, color: '#FF4D4D' },
+            { name: 'Packer', Icon: SiPacker, color: '#02A8EF' },
+            { name: 'GitHub Actions', Icon: SiGithubactions, color: '#2088FF' },
+            { name: 'Nginx', Icon: SiNginx, color: '#22B14C' },
+            { name: 'Hetzner Cloud', Icon: SiHetzner, color: '#E8344E' },
+            { name: 'AWS', Icon: SiAmazonwebservices, color: '#FF9900' },
+            { name: 'Cloudflare', Icon: SiCloudflare, color: '#F38020' },
+            { name: 'Tailscale', Icon: SiTailscale, color: '#FFFFFF' },
+            { name: 'Linux', Icon: SiLinux, color: '#FCC624' },
+            { name: 'Grafana', Icon: SiGrafana, color: '#F46800' },
+            { name: 'Prometheus', Icon: SiPrometheus, color: '#E6522C' },
+            { name: 'OpenTelemetry', Icon: SiOpentelemetry, color: '#F5A800' },
+        ],
+        extra: { label: 'Languages', items: ['Bash', 'YAML', 'HCL', 'Jinja2'] },
     },
     {
         id: 'security',
         title: 'Security & Pentesting',
         caption: 'Breaking things to make them safer',
         skills: [
-            { name: 'Metasploit', icon: metasploit },
-            { name: 'Burp Suite', icon: burpsuite },
-            { name: 'Nmap', icon: nmap },
-            { name: 'John the Ripper', icon: john },
-            { name: 'Nikto', icon: nikto },
-            { name: 'Wireshark', icon: wireshark },
-            { name: 'Aircrack-ng', icon: aircrack },
-            { name: 'Autopsy', icon: autopsy },
-            { name: 'SET', icon: set },
+            { name: 'Metasploit', img: metasploit },
+            { name: 'Burp Suite', img: burpsuite },
+            { name: 'Nmap', img: nmap },
+            { name: 'John the Ripper', img: john },
+            { name: 'Nikto', img: nikto },
+            { name: 'Wireshark', img: wireshark },
+            { name: 'Aircrack-ng', img: aircrack },
+            { name: 'Autopsy', img: autopsy },
+            { name: 'SET', img: set },
         ],
     },
 ]

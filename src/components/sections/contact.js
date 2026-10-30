@@ -38,10 +38,10 @@ function Contact() {
                     Contact
                 </Reveal>
                 <Reveal as='h2' className='contact__title' delay={0.05}>
-                    Let's build something <em className='serif gradient-text'>remarkable.</em>
+                    Let's work <em className='serif gradient-text'>together.</em>
                 </Reveal>
                 <Reveal as='p' className='section-lead contact__lead' delay={0.1}>
-                    Have a project in mind, a role to fill, or a system that needs a security check? My inbox is open.
+                    Have a project, a job opening or a question? Send me an email and I'll get back to you.
                 </Reveal>
 
                 <Reveal className='contact__cta' delay={0.15}>

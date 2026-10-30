@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const script = [
     { cmd: 'whoami', out: ['amir_basic · full stack developer & pentester'] },
-    { cmd: 'cat stack.txt', out: ['JavaScript · Python · Java · C# · C++ · PHP · SQL'] },
+    { cmd: 'cat stack.txt', out: ['TypeScript · Rust · C · C++ · Python · SQL'] },
     {
         cmd: 'nmap -sV ambition',
         out: ['PORT     STATE  SERVICE', '443/tcp  open   building-great-products', '1337/tcp open   breaking-them-safely'],

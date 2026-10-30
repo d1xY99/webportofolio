@@ -1,7 +1,7 @@
 export const aboutData = {
     title: "Who I am",
-    description1: "My name is Amir Basic. I'm a software developer and penetration tester based in Graz, Austria.",
-    description2: "I have a serious passion for cyber security and web development. Well-organised person, problem solver, independent employee with high attention to detail. I participated in many competitions. 287 completed rooms on TryHackMe, with 51 564 points. I'm currently in 4th place in Austria, and every day I strive to get better. I like challenges and I am persistent in what I do.",
+    description1: "I'm Amir, a full stack developer at Chipcolate in Graz. I also study Software Engineering and Management at TU Graz.",
+    description2: "Most days I write TypeScript and Rust: APIs on Bun and Axum, React frontends, PostgreSQL schemas, and the Docker, Kubernetes and Terraform setup that gets it all to production. Before Chipcolate I freelanced as a web developer and penetration tester, and security still shapes how I write code. In my free time I'm on TryHackMe, where I've finished 287 rooms and rank 4th in Austria.",
     codingSince: 2019,
     stats: [
         { value: 287, suffix: '', label: 'TryHackMe rooms completed' },

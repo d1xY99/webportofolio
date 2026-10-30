@@ -1,8 +1,10 @@
 import React from 'react';
 import { FiArrowUpRight, FiMapPin } from 'react-icons/fi';
 import { aboutData } from '../../data/aboutData';
+import { certificateData } from '../../data/certificate-data';
 import { experienceData } from '../../data/experienceData';
 import { headerData } from '../../data/headerData';
+import { skillGroups } from '../../data/skillsData';
 import Counter from '../effects/counter';
 import Reveal from '../effects/reveal';
 import ScrubText from '../effects/scrub-text';
@@ -14,7 +16,13 @@ import Terminal from './terminal';
 function About() {
     const yearsCoding = new Date().getFullYear() - aboutData.codingSince;
     const currentJob = experienceData[0];
-    const stats = [{ value: yearsCoding, suffix: '+', label: 'Years writing code' }, ...aboutData.stats];
+    const dailyLanguages = skillGroups.find((group) => group.id === 'languages').skills.length;
+    const stats = [
+        { value: yearsCoding, suffix: '+', label: 'Years writing code' },
+        { value: dailyLanguages, label: 'Languages I use every day' },
+        { value: certificateData.length, label: 'Certificates earned' },
+        ...aboutData.stats,
+    ];
 
     return (
         <section id='about' className='section'>

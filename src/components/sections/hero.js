@@ -148,17 +148,6 @@ function Hero({ ready }) {
                     >
                         <FiShield /> TryHackMe · Top 4 in Austria
                     </motion.div>
-                    <motion.div
-                        className='float-chip float-chip--code'
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={ready ? { opacity: 1, y: 0 } : undefined}
-                        transition={{ duration: 0.9, delay: 1.3, ease }}
-                    >
-                        <span className='code-token code-token--tag'>&lt;</span>
-                        FullStack
-                        <span className='code-token code-token--attr'> secure</span>
-                        <span className='code-token code-token--tag'> /&gt;</span>
-                    </motion.div>
                 </motion.div>
             </div>
 

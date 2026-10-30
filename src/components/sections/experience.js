@@ -29,6 +29,7 @@ export function Timeline({ items }) {
                         </div>
                         <h3 className='xp__title'>{item.title}</h3>
                         <p className='xp__org'>{item.org}</p>
+                        {item.description && <p className='xp__desc'>{item.description}</p>}
                         <span className='xp__index' aria-hidden='true'>
                             {String(i + 1).padStart(2, '0')}
                         </span>
@@ -46,6 +47,7 @@ function Experience() {
         org: job.company,
         period: `${job.startYear} — ${job.endYear}`,
         current: job.endYear === 'Present',
+        description: job.description,
     }));
 
     return (

@@ -1,7 +1,7 @@
 export const aboutData = {
     title: "Who I am",
-    description1: "I'm Amir, a full stack developer at Chipcolate in Graz. I also study Software Engineering and Management at TU Graz.",
-    description2: "Most days I write TypeScript and Rust: APIs on Bun and Axum, React frontends, PostgreSQL schemas, and the Docker, Kubernetes and Terraform setup that gets it all to production. Before Chipcolate I freelanced as a web developer and penetration tester, and security still shapes how I write code. In my free time I'm on TryHackMe, where I've finished 287 rooms and rank 4th in Austria.",
+    description1: "I'm Amir, and I currently work as a full stack developer.",
+    description2: "Day to day I build web applications end to end: TypeScript APIs, React frontends, PostgreSQL databases, and the Docker, Kubernetes and Terraform setup that takes them to production. Outside of that I'm most interested in systems-level programming and cybersecurity: how operating systems, memory and networks work underneath, and how software gets broken and defended.",
     codingSince: 2019,
     stats: [
         { value: 287, suffix: '', label: 'TryHackMe rooms completed' },

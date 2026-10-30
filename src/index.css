@@ -842,7 +842,7 @@ main {
 }
 
 .float-chip--thm {
-  top: 48%;
+  top: 70%;
   right: -16%;
   animation-delay: -2s;
 }
@@ -2002,6 +2002,7 @@ a.contact__card:hover {
 
   .float-chip--code {
     left: -4%;
+    bottom: -5%;
   }
 
   .bento {

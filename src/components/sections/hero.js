@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { FiArrowDown, FiArrowRight, FiDownload, FiMail, FiMapPin, FiShield } from 'react-icons/fi';
+import { FiArrowDown, FiArrowRight, FiMail, FiMapPin, FiShield } from 'react-icons/fi';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 import { onAnchorClick } from '../../hooks/use-smooth-scroll';
@@ -96,13 +96,6 @@ function Hero({ ready }) {
                                 Get in touch <FiArrowRight />
                             </a>
                         </Magnetic>
-                        {headerData.resumePdf && (
-                            <Magnetic>
-                                <a href={headerData.resumePdf} className='btn btn--ghost' target='_blank' rel='noreferrer'>
-                                    Download CV <FiDownload />
-                                </a>
-                            </Magnetic>
-                        )}
                     </motion.div>
 
                     <motion.div className='hero__socials' {...fadeUp(0.9)}>

@@ -3,6 +3,7 @@ import {
     SiAnsible,
     SiArgo,
     SiAstro,
+    SiBurpsuite,
     SiBiome,
     SiBun,
     SiC,
@@ -15,13 +16,16 @@ import {
     SiGrafana,
     SiHetzner,
     SiJavascript,
+    SiKalilinux,
     SiKubernetes,
     SiLinux,
+    SiMetasploit,
     SiMinio,
     SiMysql,
     SiNatsdotio,
     SiNginx,
     SiNodedotjs,
+    SiOwasp,
     SiOpentelemetry,
     SiPacker,
     SiPostgresql,
@@ -31,6 +35,7 @@ import {
     SiReactquery,
     SiRedis,
     SiRust,
+    SiSnyk,
     SiSqlite,
     SiStorybook,
     SiStripe,
@@ -39,23 +44,20 @@ import {
     SiTailwindcss,
     SiTerraform,
     SiThreedotjs,
+    SiTrivy,
     SiTurborepo,
     SiTypescript,
+    SiVault,
     SiVite,
     SiVitest,
+    SiWireshark,
     SiWebassembly,
     SiZod,
 } from 'react-icons/si'
 import { TbBrandReactNative, TbSql } from 'react-icons/tb'
 import aircrack from '../assets/svg/skills/aircrack.svg'
-import autopsy from '../assets/svg/skills/autopsy.svg'
-import burpsuite from '../assets/svg/skills/burpsuite.svg'
 import john from '../assets/svg/skills/john.svg'
-import metasploit from '../assets/svg/skills/metasploit.svg'
-import nikto from '../assets/svg/skills/nikto.svg'
 import nmap from '../assets/svg/skills/nmap.svg'
-import set from '../assets/svg/skills/set.svg'
-import wireshark from '../assets/svg/skills/wireshark.svg'
 
 // A skill shows either a brand icon component (Icon + color), an image (img),
 // or, when neither exists, a monogram built from its name.
@@ -161,17 +163,24 @@ export const skillGroups = [
     {
         id: 'security',
         title: 'Security & Pentesting',
-        caption: 'Breaking things to make them safer',
+        caption: 'Recon, web and network testing, cracking, reversing and AppSec',
         skills: [
-            { name: 'Metasploit', img: metasploit },
-            { name: 'Burp Suite', img: burpsuite },
+            { name: 'Kali Linux', Icon: SiKalilinux, color: '#5B9BD5' },
+            { name: 'Burp Suite', Icon: SiBurpsuite, color: '#FF6633' },
+            { name: 'OWASP ZAP', Icon: SiOwasp, color: '#FFFFFF' },
             { name: 'Nmap', img: nmap },
+            { name: 'Metasploit', Icon: SiMetasploit, color: '#5B8DEF' },
+            { name: 'Wireshark', Icon: SiWireshark, color: '#4FA3E0' },
+            { name: 'sqlmap' },
+            { name: 'ffuf' },
+            { name: 'Hashcat' },
             { name: 'John the Ripper', img: john },
-            { name: 'Nikto', img: nikto },
-            { name: 'Wireshark', img: wireshark },
+            { name: 'Hydra' },
+            { name: 'Ghidra' },
             { name: 'Aircrack-ng', img: aircrack },
-            { name: 'Autopsy', img: autopsy },
-            { name: 'SET', img: set },
+            { name: 'Trivy', Icon: SiTrivy, color: '#1FC6E8' },
+            { name: 'Snyk', Icon: SiSnyk, color: '#A78BFA' },
+            { name: 'Vault', Icon: SiVault, color: '#FFEC6E' },
         ],
     },
 ]

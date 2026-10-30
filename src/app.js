@@ -1,34 +1,45 @@
-import React, { useContext } from 'react';
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import './app.css';
-import BackToTop from './components/helper/back-to-top/back-to-top';
-import ChangeTheme from './components/helper/change-theme/change-theme';
-import ScrollToTop from './components/helper/scroll-to-top';
-import { ThemeContext } from './contexts/theme-context';
-import {  HomePage, ProjectPage } from './pages';
+import { MotionConfig } from 'framer-motion';
+import React, { useCallback, useState } from 'react';
+import Background from './components/effects/background';
+import Marquee from './components/effects/marquee';
+import Preloader from './components/effects/preloader';
+import ScrollProgress from './components/effects/scroll-progress';
+import Footer from './components/layout/footer';
+import Navbar from './components/layout/navbar';
+import About from './components/sections/about';
+import Certificates from './components/sections/certificates';
+import Contact from './components/sections/contact';
+import Education from './components/sections/education';
+import Experience from './components/sections/experience';
+import Hero from './components/sections/hero';
+import Skills from './components/sections/skills';
+import useSmoothScroll from './hooks/use-smooth-scroll';
 
 function App() {
-  const { theme } = useContext(ThemeContext);
+    const [ready, setReady] = useState(false);
+    const handleLoaded = useCallback(() => setReady(true), []);
 
-  return (
-    <div style={{ backgroundColor: theme.secondary }}>
-      <Router>
-        <ScrollToTop />
-        <Routes>
-          <Route path='/' element={<HomePage />} exact />
-          <Route path='/projects' element={<ProjectPage />} exact />
-          <Route
-            path="*"
-            element={<Navigate to="/" replace />}
-          />
-        </Routes>
-      </Router>
-      <BackToTop />
-      <ChangeTheme />
-    </div>
-  );
+    useSmoothScroll();
+
+    return (
+        <MotionConfig reducedMotion='user'>
+            <Preloader onDone={handleLoaded} />
+            <Background />
+            <ScrollProgress />
+            <Navbar ready={ready} />
+            <main>
+                <Hero ready={ready} />
+                <Marquee />
+                <About />
+                <Experience />
+                <Skills />
+                <Certificates />
+                <Education />
+                <Contact />
+            </main>
+            <Footer />
+        </MotionConfig>
+    );
 }
 
 export default App;

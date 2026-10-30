@@ -1,102 +1,147 @@
-export const skillsData = [
-    'C',
-    'C++',
-    'Java',
-    'Python',
-    'C#',
+import {
+    SiAmazonwebservices,
+    SiAnsible,
+    SiArgo,
+    SiAstro,
+    SiBurpsuite,
+    SiBiome,
+    SiBun,
+    SiC,
+    SiCplusplus,
+    SiDocker,
+    SiDuckdb,
+    SiGit,
+    SiGithubactions,
+    SiGrafana,
+    SiJavascript,
+    SiKalilinux,
+    SiKubernetes,
+    SiMetasploit,
+    SiMysql,
+    SiNatsdotio,
+    SiNodedotjs,
+    SiPostgresql,
+    SiPython,
+    SiReact,
+    SiReactquery,
+    SiRedis,
+    SiRust,
+    SiSqlite,
+    SiSupabase,
+    SiTailwindcss,
+    SiTerraform,
+    SiTurborepo,
+    SiTypescript,
+    SiVite,
+    SiVitest,
+    SiWireshark,
+    SiWebassembly,
+} from 'react-icons/si'
+import { TbBrandReactNative, TbSql } from 'react-icons/tb'
+import nmap from '../assets/svg/skills/nmap.svg'
 
-    'HTML',
-    'Javascript',
-    'CSS',
-    // 'Ubuntu',
-    'PHP',
-    'MySQL',
-    'PostgreSQL',
+// A skill shows either a brand icon component (Icon + color), an image (img),
+// or, when neither exists, a monogram built from its name.
+export const skillGroups = [
+    {
+        id: 'languages',
+        title: 'Languages',
+        caption: 'What I write every day',
+        skills: [
+            { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
+            { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E' },
+            { name: 'Rust', Icon: SiRust, color: '#F4A37A' },
+            { name: 'C', Icon: SiC, color: '#A8B9CC' },
+            { name: 'C++', Icon: SiCplusplus, color: '#659AD2' },
+            { name: 'Python', Icon: SiPython, color: '#4B8BBE' },
+            { name: 'SQL', Icon: TbSql, color: '#C4B5FD' },
+        ],
+        extra: { label: 'Also worked with', items: ['Java', 'C#', 'PHP'] },
+    },
+    {
+        id: 'data',
+        title: 'Databases',
+        caption: 'Relational, analytical and in-memory',
+        skills: [
+            { name: 'PostgreSQL', Icon: SiPostgresql, color: '#6B8FF0' },
+            { name: 'Supabase', Icon: SiSupabase, color: '#3FCF8E' },
+            { name: 'Redis', Icon: SiRedis, color: '#FF4438' },
+            { name: 'DuckDB', Icon: SiDuckdb, color: '#FFF000' },
+            { name: 'SQLite', Icon: SiSqlite, color: '#4FC3F7' },
+            { name: 'MySQL', Icon: SiMysql, color: '#5E9BD1' },
+        ],
+    },
+    {
+        id: 'frontend',
+        title: 'Frontend & mobile',
+        caption: 'Web apps, dashboards and mobile',
+        skills: [
+            { name: 'React', Icon: SiReact, color: '#61DAFB' },
+            { name: 'React Native', Icon: TbBrandReactNative, color: '#61DAFB' },
+            { name: 'Astro', Icon: SiAstro, color: '#FF7A3D' },
+            { name: 'Vite', Icon: SiVite, color: '#8D8BFF' },
+            { name: 'TanStack', Icon: SiReactquery, color: '#FF4154' },
+            { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#38BDF8' },
+        ],
+        extra: { label: 'Plus', items: ['HTML', 'CSS'] },
+    },
+    {
+        id: 'backend',
+        title: 'Backend',
+        caption: 'APIs, services and messaging',
+        skills: [
+            { name: 'Bun', Icon: SiBun, color: '#FBF0DF' },
+            { name: 'Node.js', Icon: SiNodedotjs, color: '#5FA04E' },
+            { name: 'Elysia' },
+            { name: 'Axum', Icon: SiRust, color: '#F4A37A' },
+            { name: 'NATS', Icon: SiNatsdotio, color: '#27AAE1' },
+            { name: 'WebAssembly', Icon: SiWebassembly, color: '#7B6CF6' },
+        ],
+    },
+    {
+        id: 'testing',
+        title: 'Testing & tooling',
+        caption: 'Keeping monorepos healthy',
+        skills: [
+            { name: 'Playwright' },
+            { name: 'Vitest', Icon: SiVitest, color: '#FCC72B' },
+            { name: 'Testcontainers' },
+            { name: 'Turborepo', Icon: SiTurborepo, color: '#FF4D6D' },
+            { name: 'Biome', Icon: SiBiome, color: '#60A5FA' },
+            { name: 'Git', Icon: SiGit, color: '#F05032' },
+        ],
+    },
+    {
+        id: 'devops',
+        title: 'DevOps & Cloud',
+        caption: 'Infrastructure as code, CI/CD and observability',
+        skills: [
+            { name: 'Docker', Icon: SiDocker, color: '#2496ED' },
+            { name: 'Kubernetes', Icon: SiKubernetes, color: '#4F87EA' },
+            { name: 'Argo CD', Icon: SiArgo, color: '#EF7B4D' },
+            { name: 'Terraform', Icon: SiTerraform, color: '#9B6CE0' },
+            { name: 'Ansible', Icon: SiAnsible, color: '#FF4D4D' },
+            { name: 'GitHub Actions', Icon: SiGithubactions, color: '#2088FF' },
+            { name: 'AWS', Icon: SiAmazonwebservices, color: '#FF9900' },
+            { name: 'Grafana', Icon: SiGrafana, color: '#F46800' },
+        ],
+        extra: { label: 'Languages', items: ['Bash', 'YAML', 'HCL', 'Jinja2'] },
+    },
+    {
+        id: 'security',
+        title: 'Security & Pentesting',
+        caption: 'Recon, web and network testing, cracking and reversing',
+        skills: [
+            { name: 'Kali Linux', Icon: SiKalilinux, color: '#5B9BD5' },
+            { name: 'Burp Suite', Icon: SiBurpsuite, color: '#FF6633' },
+            { name: 'Nmap', img: nmap },
+            { name: 'Metasploit', Icon: SiMetasploit, color: '#5B8DEF' },
+            { name: 'Wireshark', Icon: SiWireshark, color: '#4FA3E0' },
+            { name: 'sqlmap' },
+            { name: 'Hashcat' },
+            { name: 'Ghidra' },
+        ],
+    },
 ]
 
-// Choose your skills from below. Make sure it's in the same format and spelled correctly.
-// Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
-
-
-// AVAILABLE SKILLS
-
-/* 
-    HTML
-    CSS
-    JS 
-    React
-    Next JS
-    Nuxt JS
-    Node JS
-    Vue
-    Angular
-    Docker
-    Photoshop
-    Illustrator
-    Svelte
-    GCP
-    Azure
-    Fastify
-    Haxe
-    Ionic
-    Markdown
-    Microsoft Office
-    Picsart
-    Sketch
-    Unity
-    WolframAlpha
-    Adobe XD
-    After Effects
-    Bootstrap
-    Bulma
-    CapacitorJs
-    Coffeescript
-    MemSQL
-    C
-    C++
-    C#
-    Python
-    Java
-    Julia
-    Matlab
-    Swift
-    Ruby
-    Kotlin
-    Go
-    PHP
-    Flutter
-    Dart
-    Typescript
-    Swift
-    Git
-    Figma
-    Canva
-    Ubuntu
-    Bootstrap
-    MongoDB
-    Tailwind
-    ViteJS
-    VuetifyJS
-    MySQL
-    PostgreSQL
-    AWS
-    Firebase
-    Blender
-    Premiere Pro
-    Adobe Audition
-    Deno
-    Django
-    Gimp
-    Graphql
-    Lightroom
-    MaterialUI
-    Nginx
-    Numpy
-    OpenCV
-    Pytorch
-    Selenium
-    Strapi
-    Tensorflow
-    Webex
-    Wordpress
-*/
+export const allSkills = skillGroups.flatMap((group) => group.skills)

@@ -1,7 +1,13 @@
+import portrait from '../assets/images/amir.jpg'
+
 export const headerData = {
     name: 'Amir Basic',
-    title: "Hello! I am",
-    description: "Hello! I am Amir Basic, a passionate programmer in my daily life. A quick learner with a self-learning attitude. I love to learn and explore new technologies and am Passionate about Problem Solving. ",
-    image: 'https://i.imgur.com/pg6IciZ.jpg', // Direct link to the image
+    firstName: 'Amir',
+    lastName: 'Basic',
+    roles: ['Full Stack Developer', 'Systems Programming', 'Penetration Tester'],
+    currentRole: 'Full Stack Developer at Chipcolate',
+    location: 'Graz, Austria',
+    description: "I build web applications end to end, from the APIs and databases behind them to the interfaces people use and the infrastructure they run on. I'm also deep into systems programming and security, so I think about how things work underneath and how they can break.",
+    image: portrait,
     resumePdf: 'https://drive.google.com/file/d/1S1ggdweh67edeAbbPW31_3fY3iOcDidt/view?usp=sharing'
 }

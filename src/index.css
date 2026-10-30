@@ -280,7 +280,7 @@ main {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    600px circle at var(--cursor-x, 50%) var(--cursor-y, -20%),
+    320px circle at var(--cursor-x, 50%) var(--cursor-y, -20%),
     rgba(var(--accent-rgb), 0.04),
     transparent 60%
   );
@@ -752,7 +752,7 @@ main {
   position: relative;
   justify-self: center;
   width: 100%;
-  max-width: 380px;
+  max-width: 440px;
 }
 
 .portrait {
@@ -1042,14 +1042,14 @@ main {
 .spotlight-card::before {
   inset: 0;
   z-index: -1;
-  background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.06), transparent 45%);
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.06), transparent 45%);
 }
 
 .spotlight-card::after {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-soft-rgb), 0.4), transparent 60%);
+  background: radial-gradient(160px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-soft-rgb), 0.4), transparent 60%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
@@ -1989,7 +1989,7 @@ a.contact__card:hover {
 
   .hero__visual {
     order: -1;
-    max-width: 300px;
+    max-width: 340px;
   }
 
   .float-chip--location {
@@ -2067,7 +2067,7 @@ a.contact__card:hover {
   }
 
   .hero__visual {
-    max-width: 250px;
+    max-width: 280px;
   }
 
   .float-chip {

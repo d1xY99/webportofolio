@@ -80,7 +80,6 @@ function Certificates() {
                                     type='button'
                                     className='cert__button'
                                     onClick={() => setSelected(cert)}
-                                    data-cursor='View'
                                     aria-label={`View ${cert.title} certificate`}
                                 >
                                     <div className='cert__media'>

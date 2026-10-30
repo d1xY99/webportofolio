@@ -1,7 +1,6 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
-import { headerData } from '../../data/headerData';
 import { lockScroll, onAnchorClick } from '../../hooks/use-smooth-scroll';
 
 export const navLinks = [
@@ -64,14 +63,6 @@ function Navbar({ ready }) {
                 animate={ready ? { y: hidden ? -120 : 0, opacity: 1 } : undefined}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-                <a href='#top' className='nav__logo' onClick={handleNav} aria-label='Back to top'>
-                    <span className='nav__logo-mark'>
-                        {headerData.firstName[0]}
-                        {headerData.lastName[0]}
-                    </span>
-                    <span className='nav__logo-text'>{headerData.name}</span>
-                </a>
-
                 <nav className='nav__links' aria-label='Main'>
                     {navLinks.map((link) => (
                         <a
@@ -92,20 +83,22 @@ function Navbar({ ready }) {
                     ))}
                 </nav>
 
-                <a href='#contact' className='btn btn--light btn--small nav__cta' onClick={handleNav}>
-                    Let's talk <FiArrowUpRight />
-                </a>
+                <div className='nav__actions'>
+                    <a href='#contact' className='btn btn--light btn--small nav__cta' onClick={handleNav}>
+                        Let's talk <FiArrowUpRight />
+                    </a>
 
-                <button
-                    type='button'
-                    className={`nav__burger ${open ? 'is-open' : ''}`}
-                    aria-label={open ? 'Close menu' : 'Open menu'}
-                    aria-expanded={open}
-                    onClick={() => setOpen(!open)}
-                >
-                    <span />
-                    <span />
-                </button>
+                    <button
+                        type='button'
+                        className={`nav__burger ${open ? 'is-open' : ''}`}
+                        aria-label={open ? 'Close menu' : 'Open menu'}
+                        aria-expanded={open}
+                        onClick={() => setOpen(!open)}
+                    >
+                        <span />
+                        <span />
+                    </button>
+                </div>
             </motion.header>
 
             <AnimatePresence>

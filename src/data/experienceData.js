@@ -16,7 +16,7 @@ export const experienceData = [
     {
         id: 3,
         company: 'Freelancer.com / Upwork.com',
-        jobtitle: 'Penetration Tester',
+        jobtitle: 'Penetration Tester & Security Analyst',
         startYear: '2023',
         endYear: '2024'
     },

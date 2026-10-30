@@ -752,7 +752,7 @@ main {
   position: relative;
   justify-self: center;
   width: 100%;
-  max-width: 440px;
+  max-width: 380px;
 }
 
 .portrait {
@@ -1989,7 +1989,7 @@ a.contact__card:hover {
 
   .hero__visual {
     order: -1;
-    max-width: 340px;
+    max-width: 300px;
   }
 
   .float-chip--location {
@@ -2067,7 +2067,7 @@ a.contact__card:hover {
   }
 
   .hero__visual {
-    max-width: 280px;
+    max-width: 250px;
   }
 
   .float-chip {

@@ -7,6 +7,7 @@ import Preloader from './components/effects/preloader';
 import ScrollProgress from './components/effects/scroll-progress';
 import Footer from './components/layout/footer';
 import Navbar from './components/layout/navbar';
+import PaletteSwitcher from './components/layout/palette-switcher';
 import About from './components/sections/about';
 import Certificates from './components/sections/certificates';
 import Contact from './components/sections/contact';
@@ -40,6 +41,7 @@ function App() {
                 <Contact />
             </main>
             <Footer />
+            {process.env.NODE_ENV === 'development' && <PaletteSwitcher />}
         </MotionConfig>
     );
 }

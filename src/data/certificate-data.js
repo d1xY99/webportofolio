@@ -1,4 +1,3 @@
-
 import certificate2 from "../assets/certificate/2.jpg";
 import certificate3 from "../assets/certificate/3.jpg";
 import certificate4 from "../assets/certificate/4.jpg";
@@ -9,34 +8,41 @@ export const certificateData = [
   {
     id: "02",
     title: "CompTIA Pentest+",
+    issuer: "TryHackMe · Learning Path",
+    year: "2021",
     image: certificate2,
     link: "https://www.linkpicture.com/q/2_701.jpg",
   },
-
   {
     id: "05",
     title: "Offensive Pentesting",
+    issuer: "TryHackMe · Learning Path",
+    year: "2021",
     image: certificate3,
     link: "https://www.linkpicture.com/q/3_492.jpg",
   },
-
   {
     id: "07",
     title: "Pre Security",
+    issuer: "TryHackMe · Learning Path",
+    year: "2021",
     image: certificate4,
     link: "https://www.linkpicture.com/q/4_381.jpg",
   },
   {
     id: "08",
     title: "MLH 2021",
+    issuer: "Major League Hacking · Local Hack Day",
+    year: "2021",
     image: certificate5,
     link: "https://www.linkpicture.com/q/5_411.jpg",
   },
   {
-  id: "10",
-  title: "Java (Hackerrank)",
-  image: certificate6,
-  link: "https://www.hackerrank.com/certificates/07830ed02b8b",
+    id: "10",
+    title: "Java (Hackerrank)",
+    issuer: "HackerRank · Skill Certificate",
+    year: "2023",
+    image: certificate6,
+    link: "https://www.hackerrank.com/certificates/07830ed02b8b",
   },
-  
 ];

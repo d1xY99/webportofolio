@@ -1,102 +1,73 @@
-export const skillsData = [
-    'C',
-    'C++',
-    'Java',
-    'Python',
-    'C#',
+import aircrack from '../assets/svg/skills/aircrack.svg'
+import autopsy from '../assets/svg/skills/autopsy.svg'
+import burpsuite from '../assets/svg/skills/burpsuite.svg'
+import c from '../assets/svg/skills/c.svg'
+import cplusplus from '../assets/svg/skills/cplusplus.svg'
+import csharp from '../assets/svg/skills/csharp.svg'
+import css from '../assets/svg/skills/css.svg'
+import html from '../assets/svg/skills/html.svg'
+import java from '../assets/svg/skills/java.svg'
+import javascript from '../assets/svg/skills/javascript.svg'
+import john from '../assets/svg/skills/john.svg'
+import metasploit from '../assets/svg/skills/metasploit.svg'
+import mysql from '../assets/svg/skills/mysql.svg'
+import nikto from '../assets/svg/skills/nikto.svg'
+import nmap from '../assets/svg/skills/nmap.svg'
+import php from '../assets/svg/skills/php.svg'
+import postgresql from '../assets/svg/skills/postgresql.svg'
+import python from '../assets/svg/skills/python.svg'
+import set from '../assets/svg/skills/set.svg'
+import wireshark from '../assets/svg/skills/wireshark.svg'
 
-    'HTML',
-    'Javascript',
-    'CSS',
-    // 'Ubuntu',
-    'PHP',
-    'MySQL',
-    'PostgreSQL',
+export const skillGroups = [
+    {
+        id: 'languages',
+        title: 'Languages',
+        caption: 'What I write every day',
+        skills: [
+            { name: 'JavaScript', icon: javascript },
+            { name: 'Python', icon: python },
+            { name: 'Java', icon: java },
+            { name: 'C#', icon: csharp },
+            { name: 'C++', icon: cplusplus },
+            { name: 'C', icon: c },
+            { name: 'PHP', icon: php, mono: true },
+        ],
+    },
+    {
+        id: 'web',
+        title: 'Web',
+        caption: 'Interfaces that feel right',
+        skills: [
+            { name: 'HTML', icon: html },
+            { name: 'CSS', icon: css },
+        ],
+    },
+    {
+        id: 'data',
+        title: 'Databases',
+        caption: 'Data modelled with care',
+        skills: [
+            { name: 'MySQL', icon: mysql, mono: true },
+            { name: 'PostgreSQL', icon: postgresql },
+        ],
+    },
+    {
+        id: 'security',
+        title: 'Security & Pentesting',
+        caption: 'Breaking things to make them safer',
+        skills: [
+            { name: 'Metasploit', icon: metasploit },
+            { name: 'Burp Suite', icon: burpsuite },
+            { name: 'Nmap', icon: nmap },
+            { name: 'John the Ripper', icon: john },
+            { name: 'Nikto', icon: nikto },
+            { name: 'Wireshark', icon: wireshark },
+            { name: 'Aircrack-ng', icon: aircrack },
+            { name: 'Autopsy', icon: autopsy },
+            { name: 'SET', icon: set },
+        ],
+    },
 ]
 
-// Choose your skills from below. Make sure it's in the same format and spelled correctly.
-// Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
-
-
-// AVAILABLE SKILLS
-
-/* 
-    HTML
-    CSS
-    JS 
-    React
-    Next JS
-    Nuxt JS
-    Node JS
-    Vue
-    Angular
-    Docker
-    Photoshop
-    Illustrator
-    Svelte
-    GCP
-    Azure
-    Fastify
-    Haxe
-    Ionic
-    Markdown
-    Microsoft Office
-    Picsart
-    Sketch
-    Unity
-    WolframAlpha
-    Adobe XD
-    After Effects
-    Bootstrap
-    Bulma
-    CapacitorJs
-    Coffeescript
-    MemSQL
-    C
-    C++
-    C#
-    Python
-    Java
-    Julia
-    Matlab
-    Swift
-    Ruby
-    Kotlin
-    Go
-    PHP
-    Flutter
-    Dart
-    Typescript
-    Swift
-    Git
-    Figma
-    Canva
-    Ubuntu
-    Bootstrap
-    MongoDB
-    Tailwind
-    ViteJS
-    VuetifyJS
-    MySQL
-    PostgreSQL
-    AWS
-    Firebase
-    Blender
-    Premiere Pro
-    Adobe Audition
-    Deno
-    Django
-    Gimp
-    Graphql
-    Lightroom
-    MaterialUI
-    Nginx
-    Numpy
-    OpenCV
-    Pytorch
-    Selenium
-    Strapi
-    Tensorflow
-    Webex
-    Wordpress
-*/
+export const allSkills = skillGroups.flatMap((group) => group.skills)

@@ -1,7 +1,7 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'TU Graz ( Software Engineering and Management )',
+        institution: 'TU Graz (Software Engineering and Management)',
         course: 'Bachelor Degree',
         startYear: '2020',
         endYear: 'Present'

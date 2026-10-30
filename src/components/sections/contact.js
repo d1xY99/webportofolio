@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { FiArrowUpRight, FiCheck, FiCopy, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FiArrowUpRight, FiCheck, FiCopy, FiMapPin } from 'react-icons/fi';
 import { contactsData } from '../../data/contactsData';
 import { socialsData } from '../../data/socialsData';
 import Magnetic from '../effects/magnetic';
@@ -22,7 +22,6 @@ function Contact() {
     };
 
     const links = [
-        { href: `tel:${contactsData.phone}`, icon: <FiPhone />, label: 'Phone', value: contactsData.phone },
         { icon: <FiMapPin />, label: 'Location', value: contactsData.address },
         socialsData.linkedIn && { href: socialsData.linkedIn, icon: <FaLinkedinIn />, label: 'LinkedIn', value: 'Amir Basic', external: true },
         socialsData.github && { href: socialsData.github, icon: <FaGithub />, label: 'GitHub', value: 'd1xY99', external: true },

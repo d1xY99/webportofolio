@@ -130,7 +130,6 @@ function Hero({ ready }) {
                             <img src={headerData.image} alt={headerData.name} />
                             <div className='portrait__shade' />
                         </div>
-                        <div className='portrait__glare' />
                     </Tilt>
 
                     <motion.div

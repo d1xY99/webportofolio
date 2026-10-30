@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 const palettes = [
     { id: 'sand', label: 'Sand', swatch: 'linear-gradient(135deg, #efe3c6, #1c2533)' },
-    { id: 'frost', label: 'Frost', swatch: 'linear-gradient(135deg, #d3e3f2, #10141a)' },
-    { id: 'pine', label: 'Pine', swatch: 'linear-gradient(135deg, #c4e3d9, #0f1617)' },
+    { id: 'paper', label: 'Paper', swatch: 'linear-gradient(135deg, #f1ede4 50%, #d9442a 50%)' },
+    { id: 'cobalt', label: 'Cobalt', swatch: 'linear-gradient(135deg, #f2b544 50%, #0b1633 50%)' },
 ];
 
 const STORAGE_KEY = 'portfolio-palette';

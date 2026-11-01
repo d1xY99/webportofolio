@@ -1555,12 +1555,13 @@ main {
 
 .certs {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 20px;
 }
 
 .certs__item {
   grid-column: span 2;
+  min-width: 0;
 }
 
 .certs__item:nth-child(4),
@@ -1596,20 +1597,26 @@ main {
 .cert__media {
   position: relative;
   flex: none;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   margin: 10px 10px 0;
   border-radius: 16px;
   background: #fff;
 }
 
-.certs__item:nth-child(4) .cert__media,
-.certs__item:nth-child(5) .cert__media {
-  aspect-ratio: 16 / 8;
+/* A padding spacer sets the height instead of aspect-ratio, which Safari
+   used to size the card wider than the screen. */
+.cert__media::before {
+  content: '';
+  display: block;
+  padding-top: 62.5%;
+}
+
+.certs__item:nth-child(4) .cert__media::before,
+.certs__item:nth-child(5) .cert__media::before {
+  padding-top: 50%;
 }
 
 .cert__media img {
-  /* Absolute so the image's own size never stretches the card (Safari). */
   position: absolute;
   inset: 0;
   width: 100%;
@@ -2025,7 +2032,7 @@ a.contact__card:hover {
   }
 
   .certs {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .certs__item,
@@ -2154,7 +2161,7 @@ a.contact__card:hover {
   }
 
   .certs {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .certs__item:nth-child(5) {

@@ -10,6 +10,23 @@ import Tilt from '../effects/tilt';
 
 const ease = [0.16, 1, 0.3, 1];
 
+// The scroll parallax only fits the two-column layout. On narrow screens the
+// text sits below the portrait, so fading it on scroll would hide it.
+const PARALLAX_QUERY = '(min-width: 901px)';
+
+function useMediaQuery(query) {
+    const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
+
+    useEffect(() => {
+        const list = window.matchMedia(query);
+        const handleChange = () => setMatches(list.matches);
+        list.addEventListener('change', handleChange);
+        return () => list.removeEventListener('change', handleChange);
+    }, [query]);
+
+    return matches;
+}
+
 function SplitWord({ text, delay, ready, className }) {
     return (
         <span className={`split-word ${className || ''}`} aria-label={text}>
@@ -59,6 +76,7 @@ function Hero({ ready }) {
     const contentY = useTransform(scrollY, [0, 700], [0, -120]);
     const visualY = useTransform(scrollY, [0, 700], [0, -60]);
     const fade = useTransform(scrollY, [0, 500], [1, 0]);
+    const parallax = useMediaQuery(PARALLAX_QUERY);
 
     const fadeUp = (delay) => ({
         initial: { opacity: 0, y: 24, filter: 'blur(8px)' },
@@ -69,7 +87,7 @@ function Hero({ ready }) {
     return (
         <section id='top' className='hero'>
             <div className='container hero__inner'>
-                <motion.div className='hero__content' style={{ y: contentY, opacity: fade }}>
+                <motion.div className='hero__content' style={parallax ? { y: contentY, opacity: fade } : undefined}>
                     <motion.a href='#experience' className='badge' onClick={onAnchorClick} {...fadeUp(0.1)}>
                         <span className='live-dot' />
                         {headerData.currentRole}
@@ -119,7 +137,7 @@ function Hero({ ready }) {
 
                 <motion.div
                     className='hero__visual'
-                    style={{ y: visualY }}
+                    style={parallax ? { y: visualY } : undefined}
                     initial={{ opacity: 0, scale: 0.92, filter: 'blur(14px)' }}
                     animate={ready ? { opacity: 1, scale: 1, filter: 'blur(0px)' } : undefined}
                     transition={{ duration: 1.4, delay: 0.3, ease }}
